@@ -1,0 +1,105 @@
+
+This calculator can produce 3 types of output: interpreter, compiler, and graph
+
+1. Open the terminal and go to the folder where these files are
+2. To produce an interpreter program, type the command: cc calc.h lex.yy.c calc.tab.c interpreter.c
+3. Run the a.out file using command: ./a.out
+4. You can use different functions/operators given in manual
+5. All the statement must follow by a semicolon
+5. If u write something other than functions as specified in manual it will give syntax error
+6. In order to get out of the calculator type "exit"
+
+Calculator Functions and Instructions :
+
+C like statement
+	if (expression) statement;
+	if (expression) statement else statement;
+
+All lower case character (a to z) are reserved as variable name to store variable
+
+CONSTANT
+	PI = 3.141592654
+	E = 2.718281828
+
+	Example	: x = PI;
+
+Trigonometric Function, inputs are recognise as in degree.
+	sin()	: sin function
+	cos()	: cos function
+	tan()	: tan function
+
+	Example : x = sin(30);
+
+Logarithmetic Function
+	log() or LOG() : logarithmic function used for calculating log value in base 10
+	ln() or LN()   : logarithmic function used for calculating log value in base e
+
+	Example : x = log(30);
+
+Arithmetric operator, input the arithmetric expression as usual
+	"+"   : adding 2 numbers
+	"-"   : substracting 2 numbers
+	"*"   : multiplying 2 numbers
+	"/"   : dividde 2 numbers
+	"%"   : mod function, return the quotient when dividing 2 numbers
+	"^"   : power function, return the left value to the power of the right value
+	
+	'+' and '-' are in the same precedence, left associative
+	'*' and '/' are in the same precedence, left associative
+	'^' and '%' are in the same precedence, left associative
+	'*' and '/' are higher precedence than '+' and '-'
+	'^' and '%' are higher precedence than '*' and '/'
+	use open and close brackets '(' ')' when necessary
+
+	Example : x = y + 5 * 4 ^ 2 / 3;
+
+Other Function
+	abs()	: return the absolute value of the number
+	sqrt()	: square root function, input value must greater than or equal to zero
+	ceil()	: ceiling function, return the nearest integer greater then or equal to the number
+	floor()	: floor function, return the nearest integer smaller then or equal to the number
+	cube()	: cube function, return the value power of 3
+	exp() or EXP()	 : exponential function, return the exponential e power of value input
+	
+	Example : x = abs(y);
+
+Other Operator
+	"!"		: factorial function, input must be an integer
+	"++" 	: increment the value on its left by 1
+	"--" 	: decrement the value on its left by 1
+	'!', '++', and '--' have the same precedence, all higher than arithmetic operator
+
+	Example : x = 2 ^ 5!;
+	
+Print Function
+	print 		: print the variable's value as normal
+	print_bin	: print the value in binary representation
+	print_oct 	: print the value in octal representation
+	print_hex 	: print the value in hexadecimal representation
+
+	Example	: print x;
+
+	print_all	: print all the used variable names and their corresponding values
+	print_allf 	: print all the used variable names and their corresponding value in 
+				  decimal, hexadecimal, octal, and binary
+
+	For binary, octal, and hexadecimal, this calculator only print integer part of the value by
+	discarding the floating point part.
+
+	Example : print_all;
+
+Input Recognizaiton
+	can recognize decimal, binary, octavalue, and hexadicimal number
+	max and min value for input is 2,147,483,647 and -2,147,483,648 
+	all the calculations give at least 15 decimal value of precision
+	decimal		: input the values as usual
+	bianry 		: input the values with prefix 'b', maximum 32 bits of '1' and '0'
+	octal 		: input the values with prefix 'o',	maximum xx characters [0-7]
+	hexadicimal : input the values with prefix 'h', use upper case letter (A-F) and [0-9], 
+				  maximum 8 characters
+
+	All the input for binary, octal, and hexadecimal must be an integer
+
+Other
+	exit	: terminate the program
+	reset 	: reset all the variables' value to zero
